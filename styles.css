@@ -34,6 +34,7 @@ header h1{
 	-moz-animation: entrada 2s linear ;
 	-o-animation: entrada 2s linear ;
 	animation: entrada 2s linear ;
+	cursor: default;
 
 }
 header label{
@@ -67,36 +68,48 @@ header label:hover{
 	height: 100%;
 	background-color: #000;
 	position: relative;
+	padding-top: 80px;
 }
 .menu li{
 	list-style: none;
 	padding: 5px;
+	display: block;
+	text-align: center;
 }
 .menu a{
 	font-size: 17px;
 	color: #fff;
 	text-decoration: none;;
-	display: block;
+	display: inline-block;
 	padding: 5px;
-	text-align: center;
 }
 .menu label{
 	position: absolute;
-	left: 105%;
-	top: 20px;
-	background-color: #fff;
-	font-size: 40px;
-	padding: 10px 20px;
+	left: 100%;
+	top: 0px;
+	width: 500%;
+	height: 100%;
+	background-color: transparent;
 	transition: background-color .8s;
 	cursor: pointer;
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 
 }
+
 .menu label:hover{
-	background-color: #000;
 	color: #fff;
-	cursor: pointer;
+	cursor: url(cursor-x.png), auto;
+
+}
+.menu label span{
+	background-color: #000;
+	font-size: 40px;
+	padding: 10px 20px;
+	display: inline-block;
+	margin-top: 8px;
+	margin-left: 8px;
+	color: #fff;
 }
 #bt-menu:checked ~ .menu{
 	opacity: 1;
@@ -105,6 +118,29 @@ header label:hover{
 }
 #bt-menu{
 	display: none;
+}
+@media(max-width: 500px)  {
+	header h1{
+		font-size: 30px;
+	}
+
+	.menu ul{
+		width: auto;
+		background-color: rgba(0,0,0,.7);
+		}
+	.menu label{
+		left: auto;
+		right: 10px;
+		top: 10px;
+		background-color: transparent;
+		color: #fff;
+	}
+	.menu label:hover{
+		background-color: transparent;
+	}
+	#bt-menu:checked ~ header > label{
+		display: none;
+	}
 }
 /*animacao do bg header*/
 /*CHROME*/
