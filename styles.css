@@ -125,18 +125,21 @@ header label:hover{
 	}
 
 	.menu ul{
-		width: auto;
+		width: 100%;
 		background-color: rgba(0,0,0,.7);
-		}
+	}
 	.menu label{
+		width: auto;
 		left: auto;
-		right: 10px;
-		top: 10px;
+		right:10px;
+		top:10px;
+	}
+	.menu label span{
 		background-color: transparent;
-		color: #fff;
 	}
 	.menu label:hover{
-		background-color: transparent;
+		cursor:pointer;
+		color:#fff;
 	}
 	#bt-menu:checked ~ header > label{
 		display: none;
